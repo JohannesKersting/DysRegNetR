@@ -205,12 +205,17 @@ setValidity("DysRegNetR", function(object){
     if(length(object@size_factors) != nrow(meta)){
       msg = 'the size_factors must have the same length as the number of samples'
       errors = c(errors, msg)
+      
     } else if(is.null(names(size_factors))){
       msg = 'size_factors must be a named vector'
       errors = c(errors, msg)
     
     } else if(any(names(object@size_factors) != rownames(meta))){
       msg = 'size_factors must be a named vector, the names must match the rownames of meta'
+      errors = c(errors, msg)
+      
+    } else if(any(object@size_factors == 0)){
+      msg = 'size_factors must not include zeros'
       errors = c(errors, msg)
     }
 
