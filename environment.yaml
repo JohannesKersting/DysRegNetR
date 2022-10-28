@@ -10,4 +10,4 @@ dependencies:
   - r-ggplot2 >=3.1
   - r-ggpubr >=0.1
   - r-data.table >=1.14
-
+  - r-argparse >=2.1.6
