@@ -725,6 +725,7 @@ setMethod("show", signature("DysRegNetR"), function(object){
                 outlier_table <- paste(capture.output(show(outlier_table)), collapse = "\n")
                 model_report <- c(model_report, "Table of removed outliers during training:\n")
                 model_report <- c(model_report, outlier_table)
+                model_report <- c(model_report, "\n")
 
               }
             }

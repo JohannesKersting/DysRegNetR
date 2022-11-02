@@ -11,3 +11,5 @@ dependencies:
   - r-ggpubr >=0.1
   - r-data.table >=1.14
   - r-argparse >=2.1.6
+  - r-arrow >=9.0.0
+
